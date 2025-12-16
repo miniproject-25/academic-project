@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Resume Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Smart Resume Analyzer</h1>
+    <p>Upload your resume and see how well it matches your target role</p>
+
+    <!-- Resume Upload -->
+    <input type="file" id="resumeInput" accept=".txt">
+
+    <!-- Role Selection -->
+    <select id="roleSelect">
+      <option value="">Select Target Role</option>
+      <option value="frontend">Frontend Developer</option>
+      <option value="backend">Backend Developer</option>
+      <option value="data">Data Analyst</option>
+    </select>
+
+    <!-- Analyze Button -->
+    <button id="analyzeBtn">Analyze Resume</button>
+
+    <!-- Results -->
+    <div id="results" class="hidden">
+      <h2>Analysis Result</h2>
+      <p><strong>Resume Score:</strong> <span id="score"></span>%</p>
+
+      <h3>Matched Skills</h3>
+      <ul id="matchedSkills"></ul>
+
+      <h3>Missing Skills</h3>
+      <ul id="missingSkills"></ul>
+
+      <h3>Missing Sections</h3>
+      <ul id="missingSections"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
